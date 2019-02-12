@@ -1,0 +1,43 @@
+*.- Para iniciar levantar un servidor con node.js by windows se debe utilizar
+por cmd el comando.
+> node archivo.js
+
+*.- Libreria para no bajar y levantar el servidor cada cierto tiempo al actualizar
+"reload, automatically", igual que nodemon la librería
+/*
+  NOTE: Esta libreria queda instalada en:
+  C:\Users\Hnc-07\AppData\Roaming\npm\node_modules\supervisor\lib\cli-wrapper.js
+ */
+> npm install -g supervisor
+
+/* Para utilizar la libreria ahora node se debe ejecutar con el siguiente comando */
+> supervisor archivo.js
+
+*.- Libreria de express.js y express.io juntas
+> npm install express.io --save
+
+*.- para salir en cmd en ejecución se debe presionar "control + c"
+
+*.- Servidor NGINX con nodejs https://nginx.org/en/download.html, se descomprime
+la carpeta nginx-1.15.8 se accede por consola cd nginx-1.15.8 y se ejecuta el
+comando.
+> start nginx
+> nginx -s stop
+
+Editar nginx.conf
+----
+location / {
+    root   C:/Users/Hnc-07/Desktop/nodejs/apps-nodejs;
+    index  index.html index.htm;
+
+    # proxy para conectar node.js con nginx local
+
+    proxy_set_header Host $host;
+    proxy_set_header X-Real-IP $remote_addr;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header X-NginX-Proxy true;
+
+    proxy_pass http://localhost:3000/;
+    proxy_redirect off;
+}
+----
