@@ -2,6 +2,7 @@
 var express = require('express');
 
 // Se asigna la app de tipo express para gestionar rutas y demás...
+// Se crea una instacia de express()
 var app = express();
 
 // Se gestionan las rutas..
