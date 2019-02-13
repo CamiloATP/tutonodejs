@@ -6,7 +6,7 @@ var app = express();
 
 // Se gestionan las rutas..
 app.get('/', function(req, res){
-  res.send("Hola mundo con express.js");
+  res.send("Hola mundo con express");
 });
 
 
