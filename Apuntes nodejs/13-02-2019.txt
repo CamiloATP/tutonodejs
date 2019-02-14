@@ -1,0 +1,10 @@
+*.- Jade template para node.js ahora se llama pug
+
+- Utilizar valores dinamico
+- Simplificar html
+
+/* instalar de manera local */
+> npm install jade
+---
+*.- El archivo package.json se debe crear para que se auto registren las dependencias 
+del proyecto {}
