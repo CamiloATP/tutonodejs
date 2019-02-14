@@ -1,0 +1,6 @@
+*.- yeoman generador de proyectos node.js con distintas opciones
+
+> npm install -g yo
+> npm install -g generator-express
+/* Para generar un nuevo proyecto */
+> yo
