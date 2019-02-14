@@ -25,3 +25,7 @@ Para poder utilazar MongoDB se debe crear una carpeta dentro de C:/ con el
 nombre de data y otra dentro llamada db, estos son los requisitos para utilazar
 MongoDB en windows.
 ---
+
+socket.io
+
+> npm install --save socket.io

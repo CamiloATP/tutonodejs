@@ -1,0 +1,33 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+
+
+  include chat.pug
+
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.1/socket.io.js')
+  script(src='http://code.jquery.com/jquery-1.11.1.js')
+
+  script.
+     // instacia de socket
+     var socket = io();
+
+     $('#chatter').submit(function(){
+       // envia el mensaje a todos los clientes que tengan la conexion
+       socket.emit('chat message', $('#m').val());
+       $('#m').val('');
+
+       return false;
+     });
+
+     // Se escucha el mensaje y se agrega a la lista
+     socket.on('chat message', function(msg){
+       $('#messages').append($('<li>').text(msg));
+     });
+
+     // chat a nivel grafico no disponible por el momento
+     //$('#tituloChat').on('click', function(){
+     //  $('.chat').css({'bottom':'0px','right':'0px'})
+     //});

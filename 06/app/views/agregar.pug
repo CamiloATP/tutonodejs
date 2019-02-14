@@ -1,0 +1,25 @@
+doctype html
+html(lang="es")
+
+	head
+		title="Titulo de la pagina"
+
+	body
+		h1
+			a(href="/")=titulo
+
+		div.contenedor
+			form(name="agregarItem", action="/agregar", method="post")
+				label Color
+				input(type="text", name="color")
+
+				label Imagen
+				input(type="text", name="imagen")
+
+				label Precio
+				input(type="text", name="precio")
+
+				label Descripcion
+				input(type="text", name="descripcion")
+
+				input(type="submit", value="Guardar")

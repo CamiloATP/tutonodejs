@@ -1,0 +1,20 @@
+doctype html
+html(lang="es")
+
+	head
+		title="Titulo de la pagina"
+
+	body
+		h1
+			a(href="/")=titulo
+		div.agregar
+				a(href="agregar") Agregar
+
+		div.contenedor
+			
+		- for (var i = 0; i < camisetas.length ; ++i) {
+			div.item
+				h2="Camiseta " +camisetas[i].color
+				img(src="/img/"+camisetas[i].imagen, width="250")
+				a(href="/tienda/comprar/" + camisetas[i].descripcion  ).comprar  Comprar
+		- }
