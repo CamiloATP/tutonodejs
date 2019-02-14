@@ -44,5 +44,5 @@ app.use((req, res) => {
 });
 
 app.listen(3000);
-// test
+// test desde atom
 console.log('Conectado en el puerto 3000');
