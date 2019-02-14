@@ -4,3 +4,24 @@
 > npm install -g generator-express
 /* Para generar un nuevo proyecto */
 > yo
+/*
+  Se debe ejecutar el comado de grunt-cli antes de trabajar en el proyecto
+  creado en yeoman */
+> npm install -g grunt-cli
+/*
+  Es un adminstrador de tareas ejecuta todas las tareas necesarias para que
+  funcione el proyecto*/
+> grunt
+
+/*
+  Al ejecutar npm install se cagarán las configuraciones del archivo
+  package.json */
+> npm install
+-----
+
+MongoDB
+
+Para poder utilazar MongoDB se debe crear una carpeta dentro de C:/ con el
+nombre de data y otra dentro llamada db, estos son los requisitos para utilazar
+MongoDB en windows.
+---
